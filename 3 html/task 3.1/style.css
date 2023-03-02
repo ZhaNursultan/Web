@@ -1,0 +1,39 @@
+.bg-blue{
+    background-color: rgb(167, 12, 12);
+    color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+}
+.news{
+    width: 75%;
+    padding-left: 20px;
+
+}
+.button{
+    display: flex;
+    width: 25%;
+    padding: 10px;
+    margin-left: 50%;
+}
+.waith{
+    background-color: rgb(115, 221, 240);
+    color: black;
+    margin-top: 10px;
+}
+.contain2{
+    width: 100%;
+    display:flex;
+}
+.foto{
+    margin: auto;
+    width: 40%;
+    
+}
+
+.text{
+    width: 60%;
+    margin: 0 auto;
+    height: 100px;
+}
