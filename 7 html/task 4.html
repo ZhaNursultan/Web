@@ -1,0 +1,20 @@
+<html>
+
+<body>
+  <script>
+    let x = parseInt(prompt("enter"))
+    let arr = []
+
+    for (let i = 0; i < x; i++) {
+      arr[i] = parseInt(prompt())
+    }
+    let cum=1
+    for (let i = 0; i < arr.length; i++){ 
+    if(arr[i]!=0)
+    cum*=arr[i]
+    }
+    alert(cum)
+
+  </script>
+</body>
+</html>

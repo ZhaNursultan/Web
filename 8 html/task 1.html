@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <title>log&pasw</title>
+  <style>
+    .invalid {
+      border-color: red;
+    }
+
+    .error {
+      height: 30px;
+      color: red;
+    }
+
+    from {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="myfrom">
+    Login:<input type="text" name="login">
+    <div id="loginError" class="error"></div>
+    Password:<input type="password" name="password">
+    <div id="passwordError" class="error"></div>
+    <button type="button" onclick="checkUser()">Login</button>
+  </form>
+  <script>
+    let usersArray = [
+      { name: 'Nursultan', login: 'nurik', password: 'nur123' },
+      { name: 'Miras', login: 'mira', password: 'mir123' },
+      { name: 'Bagdat', login: 'baga', password: 'baga123' }
+    ];
+    let logField = myfrom.elements.login;
+    let passField = myform.elements.password;
+
+    function checkUser() {
+      if (logField.value == '')
+        loginError.innerHTML = 'Please entter login';
+      if (passField.value == '') {
+        passwordError.innerHTML = 'Please enter password';
+        let authenticated = false;
+
+        for (let u of usersArray) {
+          if (logField.value == u.login && passField.value == u.password) {
+            alert("Welcome:" + u.name);
+
+            authenticated = true;
+            break;
+          }
+        }
+        if (!authenticated)
+          alert("No user with such login and password");
+
+        logField.value = "";
+        passField.value = "";
+
+      }
+    }
+     function checkField(){
+      if(event.target=logField)
+      loginError.innerHTML="";
+
+      if(event.target==passField)
+      passwordError.innerHTML="";
+     
+     }
+     logField.onfocus=checkFields;
+     passField.onfocus=checkFields;
+     </script>
+</body>
+</html>
+
+  

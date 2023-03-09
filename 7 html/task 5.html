@@ -1,0 +1,49 @@
+<html>
+
+<body>
+  <script>
+    cars = [
+
+      { "name": "Toyota", "price": 12000000, "year": 2015, "volume": 2.2 },
+
+      { "name": "Mercedes", "price": 70000000, "year": 2018, "volume": 3.8 },
+
+      { "name": "Toyota", "price": 7000000, "year": 2013, "volume": 2.0 },
+
+      { "name": "BMW", "price": 11000000, "year": 2011, "volume": 3.0 },
+
+      { "name": "Lexus", "price": 60000000, "year": 2017, "volume": 5.7 }
+
+    ];
+
+
+    let x = parseInt(prompt("INSERT [1] TO SEARCH BY NAME" + '\n' +
+
+      "INSERT [2] TO SEARCH BY YEAR" + '\n' +
+
+      "INSERT [3] TO SEARCH BY ENGINE VOLUME" + '\n' +
+
+      "INSERT [4] TO SEARCH BY PRICE" + '\n' +
+
+      "INSERT [5] TO EXIT"))
+
+    alert("INSERT NAME OF CAR:")
+    let name = prompt();
+
+    for (let i = 0; i < cars.lenght; i++) {
+      if (name=="Mercedes") {
+        alert(cars[i]["name"] + " " + cars[i]["price"] + " " + cars[i]["year"] + " " + cars[i]["volume"]);
+      } else if (name === "Toyota") {
+      alert(cars[i]["name"] + " " + cars[i]["price"] + " " + cars[i]["year"] + " " + cars[i]["volume"]);
+      }
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

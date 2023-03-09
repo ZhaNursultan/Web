@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>currency</title>
+</head>
+
+<body>
+  <div>
+    <table>
+      <table cellpadding="10">
+        <tbody>
+          <tr>
+            <td>Введите сумму:</td>
+            <td>KZT (tenge)</td>
+            <td>USD (dollar)</td>
+            <td>EUR (euro)</td>
+          </tr>
+          <tr>
+            <td><input type="numbers" id="sum"><select name="" id="valuta">
+                <option value="KZT">KZT</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+              </select></td>
+            <td><input style="background-color:rgb(189, 186, 186);" type="text" id="kzt1"></td>
+            <td><input style="background-color: rgb(189, 186, 186)" type="text" id="usd2"></td>
+            <td><input style="background-color: rgb(189, 186, 186)" type="text" id="eur3"></td>
+            <td><button id="button">Расcчитать</button></td>
+          </tr>
+  </div>
+  </tbody>
+  </table>
+  </table>
+  <script>
+    function getTenge() {
+      let x = document.getElementById("valuta")
+      if (x.value == "KZT") { kzt1.value = "     - "; usd2.value = (sum.value / 431).toFixed(2); eur3.value = (sum.value / 509).toFixed(2); }
+      if (x.value == "USD") { kzt1.value = (sum.value * 429).toFixed(2); usd2.value = "     - "; eur3.value = (sum.value / 1.16).toFixed(2) }
+      if (x.value == "EUR") { kzt1.value = (sum.value * 507).toFixed(2); usd2.value = (sum.value * 1.16).toFixed(2); eur3.value = "     - " }
+    }
+    button.addEventListener("click", getTenge);
+  </script>
+</body>
+</html>
